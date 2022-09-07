@@ -5,20 +5,20 @@
 class Selefra < Formula
   desc "selefra exposes APIs and services as a high-performance relational database, giving you the ability to write SQL-based queries to explore, assess and report on dynamic data."
   homepage "https://selefra.io/"
-  version "0.0.7"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.7/selefra_darwin_arm64.zip"
-      sha256 "10dbed79d7bc6df170b405060663c7b4eec01ea6b23d6c81c44becd7e8b3a912"
+      url "https://github.com/selefra/selefra/releases/download/v0.1.0/selefra_darwin_arm64.zip"
+      sha256 "0e8f9e8be29bb41b05f9bafe4a47e44671997882f22159835aa72b37327e8fd2"
 
       def install
         bin.install "selefra"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.7/selefra_darwin_amd64.zip"
-      sha256 "f1a0e209df236f800ea88081973f5593b72035cc04a22506e900cc0cd335e897"
+      url "https://github.com/selefra/selefra/releases/download/v0.1.0/selefra_darwin_amd64.zip"
+      sha256 "5f49c980101bc4c7b774187ca95cdb88b5ec68253d78488c613fcf78ca748541"
 
       def install
         bin.install "selefra"
@@ -27,17 +27,17 @@ class Selefra < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.7/selefra_linux_amd64.tar.gz"
-      sha256 "e22ed5351745693e24da530942115080f0d5b6f582c643b6611d07f48916e679"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/selefra/selefra/releases/download/v0.1.0/selefra_linux_arm64.tar.gz"
+      sha256 "47a0321aa3627def91a4714d3a8b2056e3f8f681b830161359aeea73aba1531e"
 
       def install
         bin.install "selefra"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.7/selefra_linux_arm64.tar.gz"
-      sha256 "231e4800ada8545b4ed296083211cb02f048c4a121fb76902fb876577e2fa835"
+    if Hardware::CPU.intel?
+      url "https://github.com/selefra/selefra/releases/download/v0.1.0/selefra_linux_amd64.tar.gz"
+      sha256 "e4aaad586c70f2739370d37bf09d31e59e8134834956cafb4ee80b290587c6fe"
 
       def install
         bin.install "selefra"
