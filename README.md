@@ -16,7 +16,7 @@ See more at https://docs.brew.sh/Taps
 brew install selefra/tap/name
 You can also only add the tap which makes formulae within it available in search results (brew search output):
 
-brew tap hashicorp/tap
+brew tap selefra/tap
 Note: to clone the tap via SSH you will need to use:
 
 brew tap selefra/tap https://github.com/selefra/homebrew-tap
