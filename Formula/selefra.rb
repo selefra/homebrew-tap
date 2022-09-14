@@ -10,7 +10,7 @@ class Selefra < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/selefra/selefra/releases/download/v0.0.1/selefra_darwin_arm64.zip"
-      sha256 "a46a16312c68f8d2223ff6328850a11c57b61a4508a6f0580956a78bf5a1a5bf"
+      sha256 "f4c53b3f86fcb78820cb315729ff92ce458edeed594c4607a47e61224329f573"
 
       def install
         bin.install "selefra"
@@ -18,7 +18,7 @@ class Selefra < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/selefra/selefra/releases/download/v0.0.1/selefra_darwin_amd64.zip"
-      sha256 "d540dfcc4e67a005fff0c40aeaf564cea1f9058711c079fadb06e9fa001e51da"
+      sha256 "5160f1f130a96794ef6d0c91ed1741f8b61ea89222deeb08dd025c58c8c1b974"
 
       def install
         bin.install "selefra"
@@ -29,7 +29,7 @@ class Selefra < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/selefra/selefra/releases/download/v0.0.1/selefra_linux_arm64.tar.gz"
-      sha256 "67f3a639af4901e9c4919ef6eabd52d5ad42cfeebe19bdccc0cf8dc67bef7a13"
+      sha256 "0bebcea37054ba5654a4109077db1588773e03217172736c62913e1f0d32c455"
 
       def install
         bin.install "selefra"
@@ -37,7 +37,7 @@ class Selefra < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/selefra/selefra/releases/download/v0.0.1/selefra_linux_amd64.tar.gz"
-      sha256 "86effbf57ca082feed94404aed6419b8eadf0c35bfad1a3284632d77ea2b5c69"
+      sha256 "79abc06a5d64f0c7e92dc05c5744b1b2373a7abc9fedb0f04133a489143c1760"
 
       def install
         bin.install "selefra"
