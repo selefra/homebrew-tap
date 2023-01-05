@@ -5,20 +5,20 @@
 class Selefra < Formula
   desc "Selefra - Infrastructure as Code for Infrastructure Analysis."
   homepage "https://selefra.io/"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.2/selefra_darwin_arm64.zip"
-      sha256 "8565f692d36cb383e7dc65a0bb8b5b644400f7e9b21ee3899a39235f4a491b02"
+      url "https://github.com/selefra/selefra/releases/download/v0.0.3/selefra_darwin_arm64.zip"
+      sha256 "8028e04a30e5f7d5a7fdd9f0cb59a392e5080e50e505d6550bb1bf98ca4dfae6"
 
       def install
         bin.install "selefra"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.2/selefra_darwin_amd64.zip"
-      sha256 "39e5199aa41fde17eeaee07d0047636ba3df14315637b78371424581c731ee79"
+      url "https://github.com/selefra/selefra/releases/download/v0.0.3/selefra_darwin_amd64.zip"
+      sha256 "79c747aeb7b3a8f0bc10d0d29a3c98d8ec4aee79a8aca65f848c6384d8fcc854"
 
       def install
         bin.install "selefra"
@@ -28,16 +28,16 @@ class Selefra < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.2/selefra_linux_arm64.tar.gz"
-      sha256 "e06b0f21b20bab025902a0aca2b7714224142095bdb3ad8ec740c6386c07364f"
+      url "https://github.com/selefra/selefra/releases/download/v0.0.3/selefra_linux_arm64.tar.gz"
+      sha256 "a5a020618cade089bc240a0f649857fd6f62e0f157a3d5bae6be51c87c2e44a8"
 
       def install
         bin.install "selefra"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.2/selefra_linux_amd64.tar.gz"
-      sha256 "742b39f7ea97d8dfe5d6a2b38acbd713d8aaf35e09f5da689ca51c5e09e29978"
+      url "https://github.com/selefra/selefra/releases/download/v0.0.3/selefra_linux_amd64.tar.gz"
+      sha256 "59c69b4ed49bf0ce04b53252b0d7f1c68f6170fd3a2a84d6a9626651099c2a60"
 
       def install
         bin.install "selefra"
