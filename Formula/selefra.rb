@@ -5,20 +5,20 @@
 class Selefra < Formula
   desc "Selefra - Infrastructure as Code for Infrastructure Analysis."
   homepage "https://selefra.io/"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.4/selefra_darwin_arm64.zip"
-      sha256 "fa07809b4e74970699439f72a71df1e015dca013f74703ca3fce08c150bb21fb"
+      url "https://github.com/selefra/selefra/releases/download/v0.0.5/selefra_darwin_arm64.zip"
+      sha256 "762f9ac79b17a7da250e392ec188b10f2495ffbd420050ecfee9e404fbad6ad0"
 
       def install
         bin.install "selefra"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.4/selefra_darwin_amd64.zip"
-      sha256 "481be6a8203d934501174f3b29ba03a84ab3a362fe2ba22479889efb91d634a8"
+      url "https://github.com/selefra/selefra/releases/download/v0.0.5/selefra_darwin_amd64.zip"
+      sha256 "6c314266cec4da20a0f822d2b751a41143d361c5883ff2115a3dd9eb1707126d"
 
       def install
         bin.install "selefra"
@@ -27,17 +27,17 @@ class Selefra < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.4/selefra_linux_amd64.tar.gz"
-      sha256 "6d7ae766964c35f85a706787059d35ca06e488c91300fafdaba28686187ebfd5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/selefra/selefra/releases/download/v0.0.5/selefra_linux_arm64.tar.gz"
+      sha256 "281df62399965cdb50540304785b5636a4cccc767b947f31cd300ba6c3fbec36"
 
       def install
         bin.install "selefra"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/selefra/selefra/releases/download/v0.0.4/selefra_linux_arm64.tar.gz"
-      sha256 "08dc7b558c4fdde6323d8f3e6781b4b6084742f46bb8f6fd176fa09c4e799b81"
+    if Hardware::CPU.intel?
+      url "https://github.com/selefra/selefra/releases/download/v0.0.5/selefra_linux_amd64.tar.gz"
+      sha256 "25a86f34379bd0b52022905d3c1e71d30ce32d59bd3b7662dc8b5f08c5978be5"
 
       def install
         bin.install "selefra"
